@@ -9,18 +9,18 @@ class Accordian extends React.Component {
         }
     } 
 
-    handleButtonClick = (section, index, currentSectionIndex) => {
-        console.log(section, index, currentSectionIndex);
+    handleButtonClick = (section, index) => {
+        console.log(section, index);
         this.setState({ currentSectionIndex: index });
     };
 
     render() {
         const buttons = this.props.sections.map((section, index) => (
             <li key={index}>
-                <button onClick={() => this.handleButtonClick(section, index, this.state.currentSectionIndex)}>
+                <button onClick={() => this.handleButtonClick(section, index)}>
                     {section.title}
                 </button>
-                {(this.state.currentSectionIndex === index) && <p>{this.props.section.content}</p>}
+                <p></p>
             </li>
         ));
 

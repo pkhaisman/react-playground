@@ -2,7 +2,7 @@ import React from 'react';
 
 class HelloWorld extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             who: 'world'
         }
