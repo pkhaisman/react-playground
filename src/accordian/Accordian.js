@@ -1,11 +1,11 @@
 import React from 'react';
+import './Accordian.css';
 
 class Accordian extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             currentSectionIndex: null,
-            content: null
         }
     } 
 
@@ -15,14 +15,20 @@ class Accordian extends React.Component {
     };
 
     render() {
-        const buttons = this.props.sections.map((section, index) => (
-            <li key={index}>
-                <button onClick={() => this.handleButtonClick(section, index)}>
-                    {section.title}
-                </button>
-                <p></p>
-            </li>
-        ));
+        const buttons = this.props.sections.map((section, index) => {
+            let pStyle = (this.state.currentSectionIndex === index) ? '' : 'hidden';
+
+            return (        
+                <li key={index}>
+                    <button onClick={() => this.handleButtonClick(section, index)}>
+                        {section.title}
+                    </button>
+                    <p className={pStyle}>
+                        {section.content}
+                    </p>
+                </li>
+            )
+        });
 
         return (
             <ul>

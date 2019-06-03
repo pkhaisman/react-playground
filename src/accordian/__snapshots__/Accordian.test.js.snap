@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordian Component renders three buttons 1`] = `
+<ul>
+  <li>
+    <button
+      onClick={[Function]}
+    >
+      Section 1
+    </button>
+    <p
+      className="hidden"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </li>
+  <li>
+    <button
+      onClick={[Function]}
+    >
+      Section 2
+    </button>
+    <p
+      className="hidden"
+    >
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
+  </li>
+  <li>
+    <button
+      onClick={[Function]}
+    >
+      Section 3
+    </button>
+    <p
+      className="hidden"
+    >
+      Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+    </p>
+  </li>
+</ul>
+`;
+
+exports[`Accordian Component shows p tag content on button click 1`] = `
+<ul>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Section 1
+    </button>
+    <p
+      className="hidden"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Section 2
+    </button>
+    <p
+      className=""
+    >
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
+  </li>
+  <li
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+    >
+      Section 3
+    </button>
+    <p
+      className="hidden"
+    >
+      Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+    </p>
+  </li>
+</ul>
+`;

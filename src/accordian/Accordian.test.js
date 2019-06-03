@@ -26,4 +26,15 @@ describe('Accordian Component', () => {
         ReactDOM.render(<Accordian sections={sections} />, div);
         ReactDOM.unmountComponentAtNode(div);
     })
+
+    it('renders three buttons', () => {
+        const tree = renderer.create(<Accordian sections={sections}/>);
+        expect(tree).toMatchSnapshot();
+    })    
+
+    it('shows p tag content on button click', () => {
+        const wrapper = shallow(<Accordian sections={sections} />);
+        wrapper.find('button').at(1).simulate('click');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    })
 })
